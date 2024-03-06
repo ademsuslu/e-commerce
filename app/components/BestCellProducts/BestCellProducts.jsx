@@ -1,10 +1,10 @@
-import React from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
-import CategoryHeading from "../CategoryHeading/CategoryHeading";
-import CardPlaceholder from "../PlaceHolders/CardPlaceholder";
-import BtnDanger from "../Buttons/BtnDanger";
-import { BestCellData } from "@/data/Data";
-import { CiHeart, CiShoppingCart, CiStar } from "react-icons/ci";
+import React from 'react'
+import { Card, Col, Container, Row } from 'react-bootstrap'
+import CategoryHeading from '../CategoryHeading/CategoryHeading'
+import CardPlaceholder from '../PlaceHolders/CardPlaceholder'
+import BtnDanger from '../Buttons/BtnDanger'
+import { BestCellData } from '../../../data/Data'
+import { CiHeart, CiShoppingCart, CiStar } from 'react-icons/ci'
 
 export default function BestCellProducts() {
   return (
@@ -17,7 +17,7 @@ export default function BestCellProducts() {
       <Row>
         {BestCellData ? (
           BestCellData.map((item, index) => {
-            const { img, title, newPrice, oldPrice, comment } = item;
+            const { img, title, newPrice, oldPrice, comment } = item
             return (
               <Col lg={3} md={6} sm={12} key={index} className="mb-3 mb-lg-0">
                 <Card className="position-relative">
@@ -31,12 +31,12 @@ export default function BestCellProducts() {
                       </div>
                     </div>
                   </div>
-                  <div className="" style={{ width: "100%", height: "200px" }}>
+                  <div className="" style={{ width: '100%', height: '200px' }}>
                     <Card.Img
                       variant="top"
                       className="w-100  h-100 object-fit-cover "
                       src={img}
-                    />{" "}
+                    />{' '}
                   </div>
                   <Card.Body className="text-start">
                     <Card.Title className="fs-6">{title}</Card.Title>
@@ -57,7 +57,7 @@ export default function BestCellProducts() {
                   </Card.Body>
                 </Card>
               </Col>
-            );
+            )
           })
         ) : (
           <CardPlaceholder />
@@ -69,5 +69,5 @@ export default function BestCellProducts() {
         </Col>
       </Row>
     </Container>
-  );
+  )
 }

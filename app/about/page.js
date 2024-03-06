@@ -1,8 +1,8 @@
-import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import Vissions from "../components/Vissions/Vissions";
-import { team } from "@/data/Data";
-import Link from "next/link";
+import React from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
+import Vissions from '../components/Vissions/Vissions'
+import { team } from '../../data/Data'
+import Link from 'next/link'
 
 export default function Page() {
   return (
@@ -40,7 +40,7 @@ export default function Page() {
       <Row className="my-4">
         <Col className="col-12 col-md-3">
           <div className="d-flex flex-column rounded border p-2  justify-content-center align-items-center">
-            <div className="text-center" style={{ width: "35px" }}>
+            <div className="text-center" style={{ width: '35px' }}>
               <img src="/home.jpeg" className="img-fluid" alt="" />
             </div>
             <h4 className="my-2">10.5k </h4>
@@ -49,7 +49,7 @@ export default function Page() {
         </Col>
         <Col className="col-12 col-md-3">
           <div className="d-flex flex-column rounded border p-2  bg-danger text-white  justify-content-center align-items-center">
-            <div className="text-center" style={{ width: "35px" }}>
+            <div className="text-center" style={{ width: '35px' }}>
               <img src="/dolar.jpeg" className="img-fluid" alt="" />
             </div>
             <h4 className="my-2">33k </h4>
@@ -58,7 +58,7 @@ export default function Page() {
         </Col>
         <Col className="col-12 col-md-3 ">
           <div className="d-flex flex-column rounded border p-2  justify-content-center align-items-center">
-            <div className="text-center" style={{ width: "35px" }}>
+            <div className="text-center" style={{ width: '35px' }}>
               <img src="/canta.jpeg" className="img-fluid" alt="" />
             </div>
             <h4 className="my-2">45.5k </h4>
@@ -67,7 +67,7 @@ export default function Page() {
         </Col>
         <Col className="col-12 col-md-3">
           <div className="d-flex flex-column rounded border p-2  justify-content-center align-items-center">
-            <div className="text-center" style={{ width: "35px" }}>
+            <div className="text-center" style={{ width: '35px' }}>
               <img src="/kese.jpeg" className="img-fluid" alt="" />
             </div>
             <h4 className="my-2">25k </h4>
@@ -85,7 +85,7 @@ export default function Page() {
               <div className="text-center">
                 <div
                   className=" my-4 mx-auto"
-                  style={{ width: "150px", height: "160px" }}
+                  style={{ width: '150px', height: '160px' }}
                 >
                   <img className="img-fluid" src={item.img} alt={item.name} />
                 </div>
@@ -103,14 +103,14 @@ export default function Page() {
                       >
                         {item}
                       </Link>
-                    );
+                    )
                   })}
                 </div>
               </div>
             </Col>
-          );
+          )
         })}
       </Row>
     </Container>
-  );
+  )
 }

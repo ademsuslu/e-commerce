@@ -1,15 +1,15 @@
-"use client";
-import React from "react";
-import { Container, Row, Col, Placeholder } from "react-bootstrap";
-import CategoryHeading from "../CategoryHeading/CategoryHeading";
-import { ProductData } from "@/data/Data";
+'use client'
+import React from 'react'
+import { Container, Row, Col, Placeholder } from 'react-bootstrap'
+import CategoryHeading from '../CategoryHeading/CategoryHeading'
+import { ProductData } from '../../../data/Data'
 
-import { Card } from "react-bootstrap";
-import { CiHeart, CiShoppingCart, CiStar } from "react-icons/ci";
-import BtnDanger from "../Buttons/BtnDanger";
-import BtnDark from "../Buttons/BtnDark";
-import CardPlaceholder from "../PlaceHolders/CardPlaceholder";
-import Hr from "../Hr/Hr";
+import { Card } from 'react-bootstrap'
+import { CiHeart, CiShoppingCart, CiStar } from 'react-icons/ci'
+import BtnDanger from '../Buttons/BtnDanger'
+import BtnDark from '../Buttons/BtnDark'
+import CardPlaceholder from '../PlaceHolders/CardPlaceholder'
+import Hr from '../Hr/Hr'
 
 export default function TodayProducts() {
   return (
@@ -22,7 +22,7 @@ export default function TodayProducts() {
       <Row>
         {ProductData ? (
           ProductData.map((item, index) => {
-            const { img, title, newPrice, oldPrice, discount, comment } = item;
+            const { img, title, newPrice, oldPrice, discount, comment } = item
             return (
               <Col lg={3} md={6} sm={12} key={index} className="mb-3 mb-lg-0">
                 <Card className="position-relative">
@@ -39,12 +39,12 @@ export default function TodayProducts() {
                       </div>
                     </div>
                   </div>
-                  <div className="" style={{ width: "100%", height: "200px" }}>
+                  <div className="" style={{ width: '100%', height: '200px' }}>
                     <Card.Img
                       variant="top"
                       className="w-100  h-100 object-fit-cover "
                       src={img}
-                    />{" "}
+                    />{' '}
                   </div>
                   <Card.Body className="text-start">
                     <Card.Title className="fs-6">{title}</Card.Title>
@@ -69,7 +69,7 @@ export default function TodayProducts() {
                   </Card.Body>
                 </Card>
               </Col>
-            );
+            )
           })
         ) : (
           <CardPlaceholder />
@@ -82,5 +82,5 @@ export default function TodayProducts() {
       </Row>
       <Hr />
     </Container>
-  );
+  )
 }

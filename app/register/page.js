@@ -1,5 +1,10 @@
-import React from "react";
+import React from 'react'
+import SignIn from '../components/SignIn'
 
 export default function Page() {
-  return <div>Regsiter</div>;
+  return (
+    <div>
+      <SignIn />
+    </div>
+  )
 }

@@ -1,15 +1,16 @@
-"use client";
-import { LeftNavdata } from "@/data/Data";
-import { Col, Container, Row } from "react-bootstrap";
-import HeroCarousel from "./components/carousels/HeroCarousel";
-import TodayProducts from "./components/TodayProducts/TodayProducts";
-import BrowseCategory from "./components/BrowseCategory/BrowseCategory";
-import BestCellProducts from "./components/BestCellProducts/BestCellProducts";
-import Experience from "./components/Experience/Experience";
-import OurProducts from "./components/OurProducts/OurProducts";
-import FeaturedProducts from "./components/FeaturedProducts/FeaturedProducts";
-import Vissions from "./components/Vissions/Vissions";
-export default function Home() {
+'use client'
+import { LeftNavdata } from '../data/Data'
+import { Col, Container, Row } from 'react-bootstrap'
+import HeroCarousel from './components/carousels/HeroCarousel'
+import TodayProducts from './components/TodayProducts/TodayProducts'
+import BrowseCategory from './components/BrowseCategory/BrowseCategory'
+import BestCellProducts from './components/BestCellProducts/BestCellProducts'
+import Experience from './components/Experience/Experience'
+import OurProducts from './components/OurProducts/OurProducts'
+import FeaturedProducts from './components/FeaturedProducts/FeaturedProducts'
+import Vissions from './components/Vissions/Vissions'
+import ImageUpload from './components/ImageUpload/ImageUpload'
+const Home = () => {
   return (
     <div>
       <Container className="mt-4 app-container">
@@ -19,14 +20,14 @@ export default function Home() {
               {LeftNavdata.map((item, index) => {
                 return (
                   <li
-                    style={{ width: "200px" }}
+                    style={{ width: '200px' }}
                     key={index}
                     className="py-2 d-flex justify-content-between cursorpointer"
                   >
                     {item.name}
                     <span className="">{item.icon && item.icon}</span>
                   </li>
-                );
+                )
               })}
             </ul>
           </Col>
@@ -57,5 +58,6 @@ export default function Home() {
         </Row>
       </Container>
     </div>
-  );
+  )
 }
+export default Home

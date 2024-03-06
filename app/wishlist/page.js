@@ -1,11 +1,11 @@
-"use client";
-import { ProductData } from "@/data/Data";
-import React from "react";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import { CiStar } from "react-icons/ci";
-import BtnDark from "../components/Buttons/BtnDark";
-import { MdOutlineDelete } from "react-icons/md";
-import CategoryHeading from "../components/CategoryHeading/CategoryHeading";
+'use client'
+import { ProductData } from '../../data/Data'
+import React from 'react'
+import { Button, Card, Col, Container, Row } from 'react-bootstrap'
+import { CiStar } from 'react-icons/ci'
+import BtnDark from '../components/Buttons/BtnDark'
+import { MdOutlineDelete } from 'react-icons/md'
+import CategoryHeading from '../components/CategoryHeading/CategoryHeading'
 
 export default function Page() {
   return (
@@ -22,7 +22,7 @@ export default function Page() {
       <Row>
         {ProductData ? (
           ProductData.map((item, index) => {
-            const { img, title, newPrice, oldPrice, discount, comment } = item;
+            const { img, title, newPrice, oldPrice, discount, comment } = item
             return (
               <Col lg={3} md={6} sm={12} key={index} className="mb-3 mb-lg-0">
                 <Card className="position-relative">
@@ -36,12 +36,12 @@ export default function Page() {
                       </div>
                     </div>
                   </div>
-                  <div className="" style={{ width: "100%", height: "200px" }}>
+                  <div className="" style={{ width: '100%', height: '200px' }}>
                     <Card.Img
                       variant="top"
                       className="w-100  h-100 object-fit-cover "
                       src={img}
-                    />{" "}
+                    />{' '}
                   </div>
                   <Card.Body className="text-start">
                     <Card.Title className="fs-6">{title}</Card.Title>
@@ -66,7 +66,7 @@ export default function Page() {
                   </Card.Body>
                 </Card>
               </Col>
-            );
+            )
           })
         ) : (
           <CardPlaceholder />
@@ -81,7 +81,7 @@ export default function Page() {
       <Row>
         {ProductData ? (
           ProductData.map((item, index) => {
-            const { img, title, newPrice, oldPrice, discount, comment } = item;
+            const { img, title, newPrice, oldPrice, discount, comment } = item
             return (
               <Col lg={3} md={6} sm={12} key={index} className="mb-3 mb-lg-0">
                 <Card className="position-relative">
@@ -95,12 +95,12 @@ export default function Page() {
                       </div>
                     </div>
                   </div>
-                  <div className="" style={{ width: "100%", height: "200px" }}>
+                  <div className="" style={{ width: '100%', height: '200px' }}>
                     <Card.Img
                       variant="top"
                       className="w-100  h-100 object-fit-cover "
                       src={img}
-                    />{" "}
+                    />{' '}
                   </div>
                   <Card.Body className="text-start">
                     <Card.Title className="fs-6">{title}</Card.Title>
@@ -125,12 +125,12 @@ export default function Page() {
                   </Card.Body>
                 </Card>
               </Col>
-            );
+            )
           })
         ) : (
           <CardPlaceholder />
         )}
       </Row>
     </Container>
-  );
+  )
 }

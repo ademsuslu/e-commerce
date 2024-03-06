@@ -9,7 +9,6 @@ import Experience from './components/Experience/Experience'
 import OurProducts from './components/OurProducts/OurProducts'
 import FeaturedProducts from './components/FeaturedProducts/FeaturedProducts'
 import Vissions from './components/Vissions/Vissions'
-import ImageUpload from './components/ImageUpload/ImageUpload'
 const Home = () => {
   return (
     <div>

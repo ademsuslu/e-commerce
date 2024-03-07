@@ -1,6 +1,12 @@
-import React from "react";
-import { Button } from "react-bootstrap";
+import { Button } from 'react-bootstrap'
 
-export default function BtnDanger({ text }) {
-  return <Button className="btn btn-danger ">{text}</Button>;
+export default function BtnDanger({ text, setShowAll, showAll }) {
+  const handleClick = () => {
+    setShowAll((prev) => !prev)
+  }
+  return (
+    <Button onClick={handleClick} className="btn btn-danger ">
+      {showAll ? 'View Less Products' : text}
+    </Button>
+  )
 }

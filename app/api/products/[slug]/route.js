@@ -88,6 +88,7 @@ export const PUT = async (request, { params }) => {
       },
       data: {
         name: body.name || existingProduct.name, // Gönderilen isim varsa kullan, yoksa mevcut ismi kullan
+        discount: body.discount || existingProduct.discount,
         image: body.image || existingProduct.image,
         newPrice: body.newPrice || existingProduct.newPrice,
         oldPrice: body.oldPrice || existingProduct.oldPrice,

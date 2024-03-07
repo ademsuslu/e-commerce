@@ -56,6 +56,7 @@ model VerificationToken {
 model Product {
     id          String  @id @default(auto()) @map("_id") @db.ObjectId
     name        String
+    discount    Int
     image       String // Image için bir alan
     newPrice    Float
     oldPrice    Float

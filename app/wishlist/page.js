@@ -6,6 +6,7 @@ import { CiStar } from 'react-icons/ci'
 import BtnDark from '../components/Buttons/BtnDark'
 import { MdOutlineDelete } from 'react-icons/md'
 import CategoryHeading from '../components/CategoryHeading/CategoryHeading'
+import CardPlaceholder from '../components/PlaceHolders/CardPlaceholder'
 
 export default function Page() {
   return (

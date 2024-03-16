@@ -1,6 +1,6 @@
 'use client'
 import { IoSearchCircleOutline } from 'react-icons/io5'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SearchResult from './searchresult/SearchResult'
 
 export default function Search() {

@@ -1,6 +1,5 @@
-import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import CategoryHeading from "../CategoryHeading/CategoryHeading";
+import { Col, Container, Row } from 'react-bootstrap'
+import CategoryHeading from '../CategoryHeading/CategoryHeading'
 
 export default function FeaturedProducts() {
   return (
@@ -11,10 +10,10 @@ export default function FeaturedProducts() {
         </Col>
       </Row>
       <Row
-        style={{ backgroundColor: " p-3" }}
+        style={{ backgroundColor: ' p-3' }}
         className="mt-3 justify-content-between gap-3"
       >
-        <Col style={{ backgroundColor: "#000" }} className="position-relative">
+        <Col style={{ backgroundColor: '#000' }} className="position-relative">
           <div>
             <img className="img-fluid" src="/playstation.png" alt="" />
           </div>
@@ -28,7 +27,7 @@ export default function FeaturedProducts() {
         </Col>
         <Col className=" d-none d-lg-block m-0">
           <Col
-            style={{ backgroundColor: "#000" }}
+            style={{ backgroundColor: '#000' }}
             className="position-relative p-0 m-0"
           >
             <div>
@@ -47,7 +46,7 @@ export default function FeaturedProducts() {
           <Row className="justify-content-between mt-2 m-0">
             <Col
               md={6}
-              style={{ backgroundColor: "#000" }}
+              style={{ backgroundColor: '#000' }}
               className="position-relative"
             >
               <div>
@@ -63,7 +62,7 @@ export default function FeaturedProducts() {
             </Col>
             <Col
               md={6}
-              style={{ backgroundColor: "#000" }}
+              style={{ backgroundColor: '#000' }}
               className="position-relative m-0"
             >
               <div>
@@ -81,5 +80,5 @@ export default function FeaturedProducts() {
         </Col>
       </Row>
     </Container>
-  );
+  )
 }

@@ -6,6 +6,22 @@ import { RiComputerLine } from 'react-icons/ri'
 import { BsSmartwatch } from 'react-icons/bs'
 import { CiHeadphones } from 'react-icons/ci'
 import { IoGameControllerOutline } from 'react-icons/io5'
+import { RiUserSettingsLine } from 'react-icons/ri'
+
+import { MdOutlineProductionQuantityLimits } from 'react-icons/md'
+
+export const NavbarData = [
+  {
+    name: 'Users',
+    url: '/dashboard/users',
+    icon: <RiUserSettingsLine />,
+  },
+  {
+    name: 'Products',
+    url: '/dashboard/products',
+    icon: <MdOutlineProductionQuantityLimits />,
+  },
+]
 
 export const LeftNavdata = [
   { name: 'Woman’s Fashion ', icon: <IoIosArrowForward /> },
@@ -188,5 +204,40 @@ export const team = [
     name: 'Will Smith',
     gorev: 'Product Designer',
     icons: [<CiInstagram />, <CiTwitter />, <CiLinkedin />],
+  },
+]
+export const ThData = [
+  {
+    name: 'Category',
+  },
+  {
+    name: 'Comments',
+  },
+  {
+    name: 'Discount',
+  },
+  {
+    name: 'Fallen Price',
+  },
+  {
+    name: 'Image',
+  },
+  {
+    name: 'Name',
+  },
+  {
+    name: 'New / Old',
+  },
+  {
+    name: 'New Price',
+  },
+  {
+    name: 'Old Price',
+  },
+  {
+    name: 'Stars',
+  },
+  {
+    name: 'Actions',
   },
 ]

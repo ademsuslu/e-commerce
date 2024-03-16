@@ -1,8 +1,7 @@
-import React from "react";
-import { Col, Container, FloatingLabel, Form, Row } from "react-bootstrap";
-import { FiPhone } from "react-icons/fi";
-import { MdOutlineMessage } from "react-icons/md";
-import BtnDanger from "../components/Buttons/BtnDanger";
+import { Col, Container, FloatingLabel, Form, Row } from 'react-bootstrap'
+import { FiPhone } from 'react-icons/fi'
+import { MdOutlineMessage } from 'react-icons/md'
+import BtnDanger from '../components/Buttons/BtnDanger'
 
 export default function Page() {
   return (
@@ -70,7 +69,7 @@ export default function Page() {
                   <Form.Control
                     as="textarea"
                     placeholder="Leave a comment here"
-                    style={{ height: "100px" }}
+                    style={{ height: '100px' }}
                   />
                 </FloatingLabel>
               </Col>
@@ -84,5 +83,5 @@ export default function Page() {
         </Col>
       </Row>
     </Container>
-  );
+  )
 }

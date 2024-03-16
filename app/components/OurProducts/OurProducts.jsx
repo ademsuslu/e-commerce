@@ -11,6 +11,7 @@ import CardPlaceholder from '../PlaceHolders/CardPlaceholder'
 import { getProducts } from '../../action'
 
 export default function OurProducts() {
+  const [ProductData, setProductData] = useState()
   useEffect(() => {
     const fetchData = async () => {
       const data = await getProducts()
@@ -18,7 +19,6 @@ export default function OurProducts() {
     }
     fetchData()
   }, [])
-  const [ProductData, setProductData] = useState()
   const initialProducts = ProductData ? ProductData.slice(5, 9) : []
   const [showAll, setShowAll] = useState(false)
 

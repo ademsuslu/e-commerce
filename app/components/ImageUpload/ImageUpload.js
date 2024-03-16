@@ -15,7 +15,7 @@ const ImageUpload = ({ onChange, value }) => {
   return (
     <CldUploadWidget
       onUpload={handleUpload}
-      uploadPreset="t0aduqj0"
+      uploadPreset="crrezjke"
       options={{
         maxFiles: 1,
       }}
@@ -27,12 +27,13 @@ const ImageUpload = ({ onChange, value }) => {
             onClick={() => open?.()}
           >
             <TbPhotoPlus size={50} />
-            <div className="font-semibold text-lg">Click to upload</div>
+            <div className="font-semibold text-lg">image</div>
             {value && (
-              <div className="absolute inset-0 w-full h-full">
+              <div className="absolute inset-0 w-25">
                 <Image
+                  width={40}
+                  height={40}
                   alt="Upload"
-                  fill
                   style={{ objectFit: 'cover' }}
                   src={value}
                 />

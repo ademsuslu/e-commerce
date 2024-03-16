@@ -1,4 +1,3 @@
-'use client'
 import { LeftNavdata } from '../data/Data'
 import { Col, Container, Row } from 'react-bootstrap'
 import HeroCarousel from './components/carousels/HeroCarousel'

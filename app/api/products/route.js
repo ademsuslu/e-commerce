@@ -41,25 +41,31 @@ export async function POST(request) {
 
     const product = await prisma.product.create({
       data: {
-        name: name,
-        discount: discount,
-        image: image,
-        newPrice: newPrice,
-        oldPrice: oldPrice,
-        stars: stars,
-        comments: comments,
-        fallenPrice: fallenPrice,
-        newOrOld: newOrOld,
-        category: category,
+        name,
+        discount,
+        image,
+        newPrice,
+        oldPrice,
+        stars,
+        comments,
+        fallenPrice,
+        newOrOld,
+        category,
       },
     })
 
-    const responseBody = JSON.stringify(product)
-    return new Response(responseBody, {
+    // İşlem başarıyla gerçekleştiğinde 201 Created durum kodu ile bir yanıt dönün
+    return new Response(JSON.stringify(product), {
       status: 201,
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      },
     })
   } catch (error) {
+    // İşlem sırasında bir hata oluştuğunda 500 Internal Server Error durum kodu ile bir hata yanıtı dönün
     return new Response(error.message, { status: 500 })
   }
 }

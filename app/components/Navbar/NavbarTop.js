@@ -1,12 +1,18 @@
-"use client";
-import Link from "next/link";
-import React, { useState } from "react";
-import { Col, Container, Form, Row } from "react-bootstrap";
+'use client'
+import Link from 'next/link'
+import React, { useState } from 'react'
+import { Col, Container, Form, Row } from 'react-bootstrap'
+import { usePathname } from 'next/navigation'
 
 export default function NavbarTop() {
-  const [lang, setlang] = useState("En");
+  const [lang, setlang] = useState('En')
+  const pathname = usePathname()
+  const isAdminPage = pathname.startsWith('/dashboard')
   return (
-    <div style={{ backgroundColor: "#000000" }} className="text-white mb-4  ">
+    <div
+      style={{ backgroundColor: '#000000' }}
+      className={`text-white mb-4  ${isAdminPage ? 'd-none' : 'd-block'} `}
+    >
       <Container md={6}>
         <Row className="justify-content-between align-items-center py-1">
           <Col md={8} className="d-block navbartop-head fw-light ">
@@ -23,21 +29,21 @@ export default function NavbarTop() {
             md={4}
             className="d-flex justify-content-start justify-content-md-end p-0 m-0"
           >
-            {" "}
+            {' '}
             <Form.Select
-              style={{ backgroundColor: "#000000" }}
+              style={{ backgroundColor: '#000000' }}
               size="sm"
               className=" border-0 outline-none text-white cursorpointer  "
               onChange={(e) => setlang(e.target.value)}
               value={lang}
             >
-              <option value={"Tr"}>Tr</option>
-              <option value={"Fr"}>Fr</option>
-              <option value={"Us"}>Us</option>
+              <option value={'Tr'}>Tr</option>
+              <option value={'Fr'}>Fr</option>
+              <option value={'Us'}>Us</option>
             </Form.Select>
           </Col>
         </Row>
       </Container>
     </div>
-  );
+  )
 }

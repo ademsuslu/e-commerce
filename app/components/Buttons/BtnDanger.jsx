@@ -1,3 +1,4 @@
+'use client'
 import { Button } from 'react-bootstrap'
 
 export default function BtnDanger({ text, setShowAll, showAll }) {
